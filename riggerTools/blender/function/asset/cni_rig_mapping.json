@@ -1,0 +1,91 @@
+{
+	"bones": {
+		"root": { "parent": null, "target": "root" },
+		
+		"spine": { "parent": "root", "target": "DEF-spine" },
+		"spine_01": { "parent": "spine", "target": "DEF-spine.001" },
+		"spine_02": { "parent": "spine_01", "target": "DEF-spine.002" },
+		"spine_03": { "parent": "spine_02", "target": "DEF-spine.003" },
+		"spine_04": { "parent": "spine_03", "target": "DEF-spine.004" },
+		"neck": { "parent": "spine_04", "target": "DEF-spine.005" },
+		"head": { "parent": "neck", "target": "DEF-spine.006" },
+
+		"hair_ponytail01_L": { "parent": "head", "target": "DEF-hair.001.L" },
+		"hair_ponytail02_L": { "parent": "hair_ponytail01_L", "target": "DEF-hair.002.L" },
+		"hair_ponytail03_L": { "parent": "hair_ponytail02_L", "target": "DEF-hair.003.L" },
+		"hair_ponytail04_L": { "parent": "hair_ponytail03_L", "target": "DEF-hair.004.L" },
+
+		"hair_ponytail01_R": { "parent": "head", "target": "DEF-hair.001.R" },
+		"hair_ponytail02_R": { "parent": "hair_ponytail01_R", "target": "DEF-eye.L" },
+		"hair_ponytail03_R": { "parent": "hair_ponytail02_R", "target": "DEF-eye.R" },
+		"hair_ponytail04_R": { "parent": "hair_ponytail03_R", "target": "DEF-hair.004.R" },
+
+		"eye_L": { "parent": "head", "target": "DEF-hair.001.R" },
+		"eye_R": { "parent": "head", "target": "DEF-hair.001.R" },
+
+		"pelvis_L": { "parent": "spine", "target": "DEF-pelvis.L" },
+		"pelvis_R": { "parent": "spine", "target": "DEF-pelvis.R" },
+		
+		"thigh_L": { "parent": "pelvis_L", "target": "DEF-thigh.L" },
+		"shin_L": { "parent": "thigh_L", "target": "DEF-shin.L" },
+		"foot_L": { "parent": "shin_L", "target": "DEF-foot.L" },
+		"toe_L": { "parent": "foot_L", "target": "DEF-toe.L" },
+		
+		"thigh_R": { "parent": "pelvis_R", "target": "DEF-thigh.R" },
+		"shin_R": { "parent": "thigh_R", "target": "DEF-shin.R" },
+		"foot_R": { "parent": "shin_R", "target": "DEF-foot.R" },
+		"toe_R": { "parent": "foot_R", "target": "DEF-toe.R" },
+		
+		"shoulder_L": { "parent": "spine_03", "target": "DEF-shoulder.L" },
+		"upper_arm_L": { "parent": "shoulder_L", "target": "DEF-upper_arm.L" },
+		"forearm_L": { "parent": "upper_arm_L", "target": "DEF-forearm.L" },
+		"hand_L": { "parent": "forearm_L", "target": "DEF-hand.L" },
+		
+		"shoulder_R": { "parent": "spine_03", "target": "DEF-shoulder.R" },
+		"upper_arm_R": { "parent": "shoulder_R", "target": "DEF-upper_arm.R" },
+		"forearm_R": { "parent": "upper_arm_R", "target": "DEF-forearm.R" },
+		"hand_R": { "parent": "forearm_R", "target": "DEF-hand.R" },
+		
+		"thumb_01_L": { "parent": "hand_L", "target": "DEF-thumb.01.L" },
+		"thumb_02_L": { "parent": "thumb_01_L", "target": "DEF-thumb.02.L" },
+		"thumb_03_L": { "parent": "thumb_02_L", "target": "DEF-thumb.03.L" },
+		
+		"index_01_L": { "parent": "hand_L", "target": "DEF-f_index.01.L" },
+		"index_02_L": { "parent": "index_01_L", "target": "DEF-f_index.02.L" },
+		"index_03_L": { "parent": "index_02_L", "target": "DEF-f_index.03.L" },
+		
+		"middle_01_L": { "parent": "hand_L", "target": "DEF-f_middle.01.L" },
+		"middle_02_L": { "parent": "middle_01_L", "target": "DEF-f_middle.02.L" },
+		"middle_03_L": { "parent": "middle_02_L", "target": "DEF-f_middle.03.L" },
+		
+		"ring_01_L": { "parent": "hand_L", "target": "DEF-f_ring.01.L" },
+		"ring_02_L": { "parent": "ring_01_L", "target": "DEF-f_ring.02.L" },
+		"ring_03_L": { "parent": "ring_02_L", "target": "DEF-f_ring.03.L" },
+		
+		"pinky_01_L": { "parent": "hand_L", "target": "DEF-f_pinky.01.L" },
+		"pinky_02_L": { "parent": "pinky_01_L", "target": "DEF-f_pinky.02.L" },
+		"pinky_03_L": { "parent": "pinky_02_L", "target": "DEF-f_pinky.03.L" },
+		
+		"thumb_01_R": { "parent": "hand_R", "target": "DEF-thumb.01.R" },
+		"thumb_02_R": { "parent": "thumb_01_R", "target": "DEF-thumb.02.R" },
+		"thumb_03_R": { "parent": "thumb_02_R", "target": "DEF-thumb.03.R" },
+		
+		"index_01_R": { "parent": "hand_R", "target": "DEF-f_index.01.R" },
+		"index_02_R": { "parent": "index_01_R", "target": "DEF-f_index.02.R" },
+		"index_03_R": { "parent": "index_02_R", "target": "DEF-f_index.03.R" },
+		
+		"middle_01_R": { "parent": "hand_R", "target": "DEF-f_middle.01.R" },
+		"middle_02_R": { "parent": "middle_01_R", "target": "DEF-f_middle.02.R" },
+		"middle_03_R": { "parent": "middle_02_R", "target": "DEF-f_middle.03.R" },
+		
+		"ring_01_R": { "parent": "hand_R", "target": "DEF-f_ring.01.R" },
+		"ring_02_R": { "parent": "ring_01_R", "target": "DEF-f_ring.02.R" },
+		"ring_03_R": { "parent": "ring_02_R", "target": "DEF-f_ring.03.R" },
+		
+		"pinky_01_R": { "parent": "hand_R", "target": "DEF-f_pinky.01.R" },
+		"pinky_02_R": { "parent": "pinky_01_R", "target": "DEF-f_pinky.02.R" },
+		"pinky_03_R": { "parent": "pinky_02_R", "target": "DEF-f_pinky.03.R" },
+		
+
+	}
+}

@@ -1,0 +1,3 @@
+"""
+Rigging connection utilities module.
+"""

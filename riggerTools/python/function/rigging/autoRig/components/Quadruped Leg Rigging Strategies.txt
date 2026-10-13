@@ -1,0 +1,31 @@
+I-Generated Translation derived from User Source Transcript Submission - 2026-08-14]
+
+Quadruped Leg Rigging Strategies (Front vs Hind Legs)
+Summary of quadruped leg rigging workflows, clearly distinguishing between front and hind leg setups using Maya terminology (IK Handle, Point Constraint, Spring Solver, Skin Cluster).
+
+Front Legs
+Chain Separation (Unparenting): Do not set the Clavicle as the direct parent node of the main leg. Create a separate secondary chain (2 bones / 3 joints) instead.
+
+Point Constraint Control: Drive main joints via Point Constraints to isolate shoulder and leg movements for clean, independent control.
+
+Hind Legs
+Quadruped hind legs typically feature 4 joints / 3 bones, making them structurally complex.
+
+Avoid Spring Solver: Avoid Maya's Spring Solver or single multi-joint IK setups, as they yield unpredictable results.
+
+Secondary/Driver Chain Setup:
+
+Length Rule: Driver Bone 1 length = Main Bone 1 length. Driver Bone 2 length = Main Bone 2 + Main Bone 3 lengths combined.
+
+Alignment: Use a temporary IK Handle to align joint bends, then Freeze Rotations to zero before applying constraints.
+
+Multiple IK Handles & Reverse Chain: Apply 2 separate IK Handles (top-to-mid, mid-to-bottom) alongside a bottom-up Reverse Joint Chain to drive the ankle.
+
+Floor Penetration Fix: Never parent the Reverse Joint's IK Handle directly under the main foot controller—constrain it to the top joint instead. When lowering the hips, the ankle rotates naturally around the ball of the foot without sliding or clipping through the floor.
+
+Compression Control: Constrain the controller’s Zero Group to the driver bone to guarantee predictable compression during leg extension and flexion.
+
+Skinning (Crucial)
+Bind only main deform joints to the Skin Cluster for mesh deformation and weight painting.
+
+Turn off Deform (Exclude) on all mechanical helper joints (Secondary Chains, Reverse Joints) to exclude them from weight calculations.

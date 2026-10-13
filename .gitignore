@@ -1,0 +1,26 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Maya temporary / local files
+*.swp
+*~
+*.mayaSwatches
+mayaLog.txt
+crash_report.txt
+
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE and Editor settings
+.idea/
+.vscode/
+.obsidian/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
