@@ -123,7 +123,7 @@ else:
 	DRIVES = [		"D:\\",
 					"E:\\"		]
 
-	PROJECT_NAME = ['P_sample','P_Regulus']
+	PROJECT_NAME = ['P_sample','Project_A']
 
 	DICTIONARY_TEMPLATE = {		
 
@@ -149,10 +149,10 @@ else:
 	JOB_TEMPLATE 		= 	['Version', 'Data', 'Output', 'Commit', 'FBX']
 	EXCLUDE_VIEW_ITEM 	= 	['data.json', THUMBNAIL_NAME, 'Commit', '_Backup', '_Bakup', '_backup', '_bakup']
 	STATIC_FOLDER 		= 	[ASSET_TOP_FOLDER, 'Version', 'Commit']
-	DEFAULT_PROJECT 	= 	'P_Regulus'
+	DEFAULT_PROJECT 	= 	'Project_A'
 	
 	MAYA_EXT 			= 	'ma'
-	USE_VARIATION 		= 	('P_Regulus')
+	USE_VARIATION 		= 	('Project_A')
 	SVN_BIN_PATH 		= r"C:\Program Files\TortoiseSVN\bin"
 	HIDE_FORMAT = ['*.pyc', '*.o']
 	FIXED_PROJECT_PATHS = {}
@@ -1331,7 +1331,7 @@ class FileManager(fileManagerMainUI.Ui_MainWindow, QtWidgets.QMainWindow):
 		selected_project = self.project_comboBox.currentText()
 
 		split_path_list = new_folder_path.split('\\')
-		#... Project Regulus is use wired naming 
+		#... Project Project_A is use wired naming 
 		#... We can't use '01' or '02' variation name as a Asset name 
 		#... So add [Asset_name]_[Variation]_[Job] instead [Asset_name]_[Job]
 
@@ -1344,7 +1344,7 @@ class FileManager(fileManagerMainUI.Ui_MainWindow, QtWidgets.QMainWindow):
 
 
 
-		# if selected_project == 'P_Regulus':
+		# if selected_project == 'Project_A':
 		if selected_project in USE_VARIATION:
 		
 			asset_name = split_path_list[-3]
@@ -1358,7 +1358,7 @@ class FileManager(fileManagerMainUI.Ui_MainWindow, QtWidgets.QMainWindow):
 
 		else:
 
-			FileManagerLog.debug('There is not REGULUS using original naming')
+			FileManagerLog.debug('There is not Project_A using original naming')
 			asset_name = split_path_list[-2]
 			job_name = split_path_list[-1]
 			final_file_name = asset_name + '_' + job_name

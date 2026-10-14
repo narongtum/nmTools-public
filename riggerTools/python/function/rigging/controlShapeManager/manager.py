@@ -9,7 +9,7 @@ from maya import cmds as mc
 import utils
 reload(utils)
 
-SHAPE_LIBRARY_PATH = "D:/True_Axion/Tools/riggerTools/python/axionTools/rigging/ctrlSizeLibrary"
+SHAPE_LIBRARY_PATH = "D:/studio_pipeline/Tools/riggerTools/python/riggerTools/rigging/ctrlSizeLibrary"
 
 
 def getShape(crv=None):

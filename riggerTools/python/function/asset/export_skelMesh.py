@@ -153,7 +153,7 @@ def exportRig_fbx( ignoreJnt = False ,jnt_suffix = '_bJnt', mesh_suffix = '_ply'
 
 
 	# sent FBX rig file to here
-	# D:\True_Axion_Unity_Project\trash_game\Assets\Local Asset\Models\Default Asset\Characters\Dodo\Mesh
+	# D:\studio_pipeline_Unity_Project\trash_game\Assets\Local Asset\Models\Default Asset\Characters\Dodo\Mesh
 	
 	
 	

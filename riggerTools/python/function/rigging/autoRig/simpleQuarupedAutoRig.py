@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import maya.cmds as mc
 
-#sys.path.append(r'D:\True_Axion\Tools\riggerTools\python\axionTools\rigging\autoRig\bodyRig')
+#sys.path.append(r'D:\studio_pipeline\Tools\riggerTools\python\riggerTools\rigging\autoRig\bodyRig')
 
 
 # simple quradrupedLegRig using human leg rig for each animal leg

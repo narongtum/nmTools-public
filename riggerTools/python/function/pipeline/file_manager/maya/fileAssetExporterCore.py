@@ -195,7 +195,7 @@ class FileAssetExporter(QtWidgets.QMainWindow):
 
 			self.apply_project_config_to_ui(current_project)
 
-			#... specific naming for only P_Regulus project
+			#... specific naming for only Project_A project
 
 
 

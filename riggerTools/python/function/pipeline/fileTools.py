@@ -756,8 +756,8 @@ def copyMayaFiles():
 	dest = os.path.join( os.path.expanduser("~"), "maya" )
 	if os.path.exists( dest ):
 		#shutil.copy( r'P:\sysTool\maya\2012-x64\Maya.env', '%s' % dest )
-		shutil.copy( r'D:\True_Axion\Tools\riggerTools\maya\scripts\userSetup.mel', '%s\\scripts' % dest )
-		shutil.copy( r'D:\True_Axion\Tools\riggerTools\maya\scripts\userSetup.py', '%s\\scripts' % dest )
+		shutil.copy( r'D:\studio_pipeline\Tools\riggerTools\maya\scripts\userSetup.mel', '%s\\scripts' % dest )
+		shutil.copy( r'D:\studio_pipeline\Tools\riggerTools\maya\scripts\userSetup.py', '%s\\scripts' % dest )
 		print ('Copy maya userSetup to %s' %dest)
 		print ("\nDO NOT CLOSE...")
 		time.sleep(2)

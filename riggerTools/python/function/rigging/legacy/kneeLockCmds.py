@@ -1,10 +1,10 @@
-from axionTools.rigging import kneeLock as kl
+from riggerTools.rigging import kneeLock as kl
 reload(kl)
 
-from axionTools.rigging.util import misc as misc
+from riggerTools.rigging.util import misc as misc
 reload(misc)
 
-from axionTools.pipeline import fileTools as fileTools 
+from riggerTools.pipeline import fileTools as fileTools 
 reload(fileTools)
 
 
@@ -56,7 +56,7 @@ def runLock(nameUPR,namePov,nameLWR,stretchNode,upperJnt,lowerJnt):
 	)
 
 '''
-from axionTools.rigging import kneeLockCmds as run
+from riggerTools.rigging import kneeLockCmds as run
 
 run.runLock(			nameUPR = 'shoulderLFT_null_grp',
 						namePov = 'armLFT_pov_ctrl',

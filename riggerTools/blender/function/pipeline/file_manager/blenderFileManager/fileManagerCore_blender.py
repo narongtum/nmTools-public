@@ -87,7 +87,7 @@ if os.path.exists(file_path):
 		logger.error(f"Error loading config: {e}")
 		# Default Fallbacks
 		DRIVES = ["D:\\", "E:\\"]
-		PROJECT_NAME = ['P_sample','P_Regulus']
+		PROJECT_NAME = ['P_sample','Project_A']
 		BASE_FOLDER = "projects"
 		ASSET_TOP_FOLDER = "Content"
 		SCENE_TOP_FOLDER = "Sequence"
@@ -97,7 +97,7 @@ if os.path.exists(file_path):
 else:
 	# Default Fallbacks
 	DRIVES = ["D:\\", "E:\\"]
-	PROJECT_NAME = ['P_sample','P_Regulus']
+	PROJECT_NAME = ['P_sample','Project_A']
 	DICTIONARY_TEMPLATE = {"base_path":"","entitie_type":"","entitie_name":"","full_entity_name":"","comment":"","department_name":"","add_path_SVN":""}
 	BASE_FOLDER = "projects"
 	ASSET_TOP_FOLDER = "Content"
@@ -108,7 +108,7 @@ else:
 	EXCLUDE_VIEW_ITEM = ['data.json', THUMBNAIL_NAME, 'Commit']
 	STATIC_FOLDER = [ASSET_TOP_FOLDER, 'Version', 'Commit']
 	DEFAULT_PROJECT = 'Project_A'
-	USE_VARIATION = ('P_Regulus')
+	USE_VARIATION = ('Project_A')
 	SVN_BIN_PATH = r"C:\Program Files\TortoiseSVN\bin"
 	HIDE_FORMAT = ['*.pyc', '*.o']
 	FIXED_PROJECT_PATHS = {}

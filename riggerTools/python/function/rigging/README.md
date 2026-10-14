@@ -15,7 +15,7 @@
 | [6. Controllers, Shapes & Curve Tools](#controllers_curves) | ระบบคลัง NURBS Shapes, เครื่องมือสร้าง Gimbal/Zero group, ปรับแต่งรูปทรง/สี และจัดการขนาดคอนโทรลเลอร์ | `25` |
 | [7. Skeleton & Joint Systems](#skeleton_joints) | เครื่องมือสร้างและจัดการ Joint บน Curve, จัดการ Bind Joints, คำนวณความยาว และการแทนที่ Template Joints | `4` |
 | [8. Skinning, Deformers & BlendShapes](#skin_deformers) | เครื่องมือบริหารจัดการ Skin Weights (SkinWrangler, nsSkinClusterIO, brSmoothWeights, Curve skinning) และ BlendShape Inverters | `33` |
-| [9. Project-Specific Rigging Modules](#project_specific) | สคริปต์เฉพาะสำหรับโปรเจกต์ เช่น Project_Regulus_Sample และ Project_Sample (Local/World, Texture switch, Facial link) | `9` |
+| [9. Project-Specific Rigging Modules](#project_specific) | สคริปต์เฉพาะสำหรับโปรเจกต์ เช่น Project_Project_A_Sample และ Project_Sample (Local/World, Texture switch, Facial link) | `9` |
 | [10. Features, Tools & Utility Scripts](#tools_features_root) | ชุดเครื่องมือ Utilities ทั่วไป, ทำความสะอาดซีน, สร้าง Shader, Local/World switches, Snap tools และ Legacy scripts | `17` |
 | [Root Helper & One-Off Scripts](#root_scripts) | สคริปต์เดี่ยวระดับ Root folder สำหรับฟังก์ชันเฉพาะกิจและ Quick tools | `108` |
 | **รวมทั้งหมด** | | **`378`** |
@@ -2071,14 +2071,14 @@
 
 <a id="project_specific"></a>
 ## 9. Project-Specific Rigging Modules (สคริปต์เฉพาะโปรเจกต์)
-*สคริปต์เฉพาะสำหรับโปรเจกต์ เช่น Project_Regulus_Sample และ Project_Sample (Local/World, Texture switch, Facial link)*
+*สคริปต์เฉพาะสำหรับโปรเจกต์ เช่น Project_Project_A_Sample และ Project_Sample (Local/World, Texture switch, Facial link)*
 
 **จำนวนไฟล์ทั้งหมดในหมวดนี้:** `9` ไฟล์
 
 ### 📄 `Project_Sample/01_make root local or world.py`
 *สคริปต์สำหรับรันคำสั่งโดยตรง (Direct execution script)*
 
-### 📄 `Project_Regulus_Sample/01_createSwitchTextureOffset_P.py`
+### 📄 `Project_Project_A_Sample/01_createSwitchTextureOffset_P.py`
 **คำอธิบาย / รายละเอียด:** PORTABLE - createSwtichTextureOffset - ctrl must not have "mouth" Attr, if already had it will cancel place2dTexture is node that on the left side of Mouth texture
 
 **ฟังก์ชันหลัก (Functions - 5 รายการ):**
@@ -2088,29 +2088,29 @@
 - `setAttr(obj, attr, val)`
 - `connect(objA, attrA, objB, attrB)`
 
-### 📄 `Project_Regulus_Sample/02_make naming same with The Dode.py`
+### 📄 `Project_Project_A_Sample/02_make naming same with The Dode.py`
 *สคริปต์สำหรับรันคำสั่งโดยตรง (Direct execution script)*
 
-### 📄 `Project_Regulus_Sample/03_linkFacialToJnt.py`
+### 📄 `Project_Project_A_Sample/03_linkFacialToJnt.py`
 **คำอธิบาย / รายละเอียด:** this will link facial Switch ctrl to facial Offset jnt on the floor you need to link texture 2D first
 
 **ฟังก์ชันหลัก (Functions - 1 รายการ):**
 - `linkFacialToJnt(ctrl, attr, facialJnt)`
 
-### 📄 `Project_Regulus_Sample/04_local world manual.py`
+### 📄 `Project_Project_A_Sample/04_local world manual.py`
 **ฟังก์ชันหลัก (Functions - 1 รายการ):**
 - `check_obj_exists(obj_name)`
 
-### 📄 `Project_Regulus_Sample/05_create_attr.py`
+### 📄 `Project_Project_A_Sample/05_create_attr.py`
 *สคริปต์สำหรับรันคำสั่งโดยตรง (Direct execution script)*
 
-### 📄 `Project_Regulus_Sample/06_change color.py`
+### 📄 `Project_Project_A_Sample/06_change color.py`
 **คำอธิบาย / รายละเอียด:** ... change color
 
-### 📄 `Project_Regulus_Sample/07_not using namesapce.py`
+### 📄 `Project_Project_A_Sample/07_not using namesapce.py`
 *สคริปต์สำหรับรันคำสั่งโดยตรง (Direct execution script)*
 
-### 📄 `Project_Regulus_Sample/Project_Regulus_Sample_name_data.py`
+### 📄 `Project_Project_A_Sample/Project_Project_A_Sample_name_data.py`
 *สคริปต์สำหรับรันคำสั่งโดยตรง (Direct execution script)*
 
 ---

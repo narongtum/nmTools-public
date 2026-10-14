@@ -1,13 +1,13 @@
-from axionTools.rigging.autoRig.library import backLegRig as blr
+from riggerTools.rigging.autoRig.library import backLegRig as blr
 reload(blr)
 
-from axionTools.rigging.autoRig.library import spineFkRig
+from riggerTools.rigging.autoRig.library import spineFkRig
 reload(spineFkRig)
 
-from axionTools.rigging.autoRig.library import bipedLegRig
+from riggerTools.rigging.autoRig.library import bipedLegRig
 reload(bipedLegRig)
 
-from axionTools.rigging.autoRig.library import localWorldRot as lcw
+from riggerTools.rigging.autoRig.library import localWorldRot as lcw
 reload(lcw)
 
 

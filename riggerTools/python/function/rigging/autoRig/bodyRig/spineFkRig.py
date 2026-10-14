@@ -24,7 +24,7 @@ reload(spineFkRig)'''
 
 
 
-# D:\True_Axion\Tools\riggerTools\python\axionTools\rigging\autoRig\base\version
+# D:\studio_pipeline\Tools\riggerTools\python\riggerTools\rigging\autoRig\base\version
 
 def spineRig( 		nameSpace = '' ,
 					parentTo = 'ctrl_grp' 						,

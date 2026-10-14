@@ -4,7 +4,7 @@
 # Add bake specific ply for switch visibility
 
 # import sys
-# sys.path.append(r'D:\True_Axion\Tools\mayaTools\python')
+# sys.path.append(r'D:\studio_pipeline\Tools\mayaTools\python')
 
 import pymel.core as pm
 import maya.mel as mel

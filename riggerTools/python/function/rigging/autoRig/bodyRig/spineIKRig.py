@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 This module is create spine IK hybride with FK  
-source : nomanTools/21.03.Mar.29.Mon_ikSpinePart2
+source : riggerTools/21.03.Mar.29.Mon_ikSpinePart2
 Issue: bind joint rotation not zero out
 """
 

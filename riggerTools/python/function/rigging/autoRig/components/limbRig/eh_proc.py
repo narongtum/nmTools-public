@@ -435,11 +435,11 @@ def exportSelArmor():
 		mc.select(cl=True)
 		mc.select('*Root', '*'+ name)
 		# for SVN
-		# D:\True_Axion\Project_HOPE\Content\3D_ART\Character\Player\f\Armor\0010_valiant\var0
+		# D:\studio_pipeline\Project_Sample_A\Content\3D_ART\Character\Player\f\Armor\0010_valiant\var0
 		
 		#filePath = 'D:/WORK/Hope/share/char/Player/' + gender + '/Export/' + numName + '/' + varNum + '/' # This Computer
 		
-		filePath = 'D:/True_Axion/Project_HOPE/Content/3D_ART/Character/Player/' + sex + '/Armor/' + numName + '/' + varNum + '/' # To SVN
+		filePath = 'D:/studio_pipeline/Project_Sample_A/Content/3D_ART/Character/Player/' + sex + '/Armor/' + numName + '/' + varNum + '/' # To SVN
 		
 		mc.select('*Root', name)
 		sel = mc.ls(sl=True)
@@ -460,7 +460,7 @@ def exportSelOutfit():
 	    mc.select(cl=True)
 	    mc.select('*Root', items[s])
 	    # file path
-	    filePath = 'D:/True_Axion/Project_EVERGLEAM_HILL/3D_ART/Character/Player/clothes/' + name + '/fbx/' # To SVN
+	    filePath = 'D:/studio_pipeline/Project_Sample_B/3D_ART/Character/Player/clothes/' + name + '/fbx/' # To SVN
 	    sel = mc.ls(sl=True)
 	    fileName = items[s]
 	    mc.file(filePath + fileName + '.fbx', f=True, op=('v=0'), typ='FBX export', pr=True, es = True)

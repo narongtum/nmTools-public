@@ -1,12 +1,12 @@
 import os
 import subprocess
 
-#"D:\\True_Axion\\Tools\\riggerTools\\python\\axionTools\\pipeline\\playBlast\\ffmpeg-20181016-b2adc31-win64-static\\bin\\ffmpeg.exe"
+#"D:\\studio_pipeline\\Tools\\riggerTools\\python\\riggerTools\\pipeline\\playBlast\\ffmpeg-20181016-b2adc31-win64-static\\bin\\ffmpeg.exe"
 # FFMPEG convert fie V 0.2
 # FFMPEG instance path
 #FFMPEG = r'C:\\ffmpeg-20140629-git-8657612-win64-static\\bin\\ffmpeg.exe'
 
-FFMPEG = r'D:\\True_Axion\\Tools\\riggerTools\\python\\axionTools\\pipeline\\playBlast\\framework\\ffmpeg-20181016-b2adc31-win64-static\\bin\\ffmpeg.exe'
+FFMPEG = r'D:\\studio_pipeline\\Tools\\riggerTools\\python\\riggerTools\\pipeline\\playBlast\\framework\\ffmpeg-20181016-b2adc31-win64-static\\bin\\ffmpeg.exe'
 
 logic = []
 

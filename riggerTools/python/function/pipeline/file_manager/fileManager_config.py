@@ -33,7 +33,7 @@ STATIC_FOLDER       =   [ASSET_TOP_FOLDER, 'Version', 'Commit']
 DEFAULT_PROJECT = "Project_A"
 PADDING             =   4
 MAYA_EXT            =   'ma'
-USE_VARIATION       =   ('P_Regulus')
+USE_VARIATION       =   ('Project_A')
 SVN_BIN_PATH        = r"C:\Program Files\TortoiseSVN\bin"
 HIDE_FORMAT = ['*.pyc', '*.o','*.png','.mayaSwatches']
 

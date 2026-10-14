@@ -1,18 +1,18 @@
 import maya.cmds as mc
 
-from axionTools.rigging import core
+from riggerTools.rigging import core
 reload(core)
 
-from axionTools.rigging.controllerBox import adjustController as adjust
+from riggerTools.rigging.controllerBox import adjustController as adjust
 reload(adjust)
 
-from axionTools.rigging.util import misc as misc
+from riggerTools.rigging.util import misc as misc
 reload(misc)
 
-from axionTools.rigging import core 
+from riggerTools.rigging import core 
 reload(core)
 
-from axionTools.rigging.readWriteCtrlSizeData import flipController as fip
+from riggerTools.rigging.readWriteCtrlSizeData import flipController as fip
 reload(fip)
 
 

@@ -1,4 +1,4 @@
-# to ...\python\axionTools\rigging\autoRig\addRig
+# to ...\python\riggerTools\rigging\autoRig\addRig
 
 from function.pipeline import fileTools as fileTools 
 reload(fileTools)

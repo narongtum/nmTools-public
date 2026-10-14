@@ -851,7 +851,7 @@ fileTools.localPublish(mayafileType = 'mb')
 #... replace from
 from function.
 #... replace to
-from axionTools.
+from riggerTools.
 
 
 
@@ -1491,7 +1491,7 @@ def runThis():
 cmds.evalDeferred( runThis ) 
 
 
-SYSTEM_PATH = r'D:\True_Axion\Tools\mayaTools\python'
+SYSTEM_PATH = r'D:\studio_pipeline\Tools\mayaTools\python'
 
 
 import importlib
@@ -1500,7 +1500,7 @@ import importlib
 sys.path.append(SYSTEM_PATH)
 
 
-from axionMenu import axionMenu2022 as axm
+from nmMenu import nmMenu2022 as axm
 importlib.reload(axm)
 
 
@@ -2292,7 +2292,7 @@ for each in fileNodes:
 
 '''
 
-from axionTools.framework.reloadWrapper import reloadWrapper as reload
+from riggerTools.framework.reloadWrapper import reloadWrapper as reload
 
 
 
@@ -2356,7 +2356,7 @@ mel.eval( 'deleteEmptyGroups()' )
 
 
 
-from axionTools.rigging.autoRig.base import core
+from riggerTools.rigging.autoRig.base import core
 reload(core)
 
 
@@ -2367,7 +2367,7 @@ some_ctrl = core.Dag('weapon_ctrl')
 some_ctrl.addAttribute( longName = 'Snap', at = 'enum', keyable=True , en = eNum)
 
 
-from axionTools.rigging.util import misc as misc
+from riggerTools.rigging.util import misc as misc
 reload(misc)
 misc.constraintProxyJnt( child = 'bJnt', parent = 'pxyJnt' )
 
@@ -2579,7 +2579,7 @@ for each in listFile:
 
 
 # nocare exporter
-from axionTools.asset import exportFBX 
+from riggerTools.asset import exportFBX 
 reload(exportFBX)
 exportFBX.noCareExporter( suffix = '*_bJnt' , rootJnt = 'root')
 
@@ -2659,7 +2659,7 @@ def distanceNode(	nameLoc1 = 'something' ,
 
 
 # Create Controller at selected object.
-from axionTools.rigging.controllerBox import adjustController as adjust
+from riggerTools.rigging.controllerBox import adjustController as adjust
 reload(adjust)
 
 adjust.creControllerFunc(	scale = 0.5, ctrlShape = 'circleCurlUp_ctrlShape',color = 'yellow'	)
@@ -2672,7 +2672,7 @@ adjust.creControllerFunc(	scale = 0.5, ctrlShape = 'circleCurlUp_ctrlShape',colo
 
 
 # message attribute
-from axionTools.rigging.autoRig.base import core
+from riggerTools.rigging.autoRig.base import core
 reload(core)
 
 
@@ -2751,7 +2751,7 @@ for each in sel:
 
 
 
-from axionTools.rigging.util import boundingBox as bBox
+from riggerTools.rigging.util import boundingBox as bBox
 reload(bBox)
 
 sel = mc.ls(sl=True)[0]
@@ -2760,17 +2760,17 @@ bb = bBox.geoBoundingBox(sel)
 
 
 
-from axionTools.rigging.util import misc as misc
+from riggerTools.rigging.util import misc as misc
 reload(misc)
 misc.parentSufficMatrix( child = 'bJnt' , parent = 'pxyJnt' , mo = True, w = 1, t = True, r = True, s = True)
 
-from axionTools.rigging.util import misc as misc
+from riggerTools.rigging.util import misc as misc
 reload(misc)
 sel = mc.ls(sl=True)
 misc.parentMatrix( sel[0], sel[1], mo = True, t = True, r = True, s = True)
 
 
-from axionTools.rigging.util import misc as misc
+from riggerTools.rigging.util import misc as misc
 reload(misc)
 
 misc.parentSufficMatrix( child = 'bJnt' , parent = 'pxyJnt' , mo = True, w = 1, t = True, r = True, s = True)
@@ -2831,7 +2831,7 @@ geoShape = mc.listRelatives(selGEO, shapes = True)[0]
 
 
 # Create Controller at selected object.
-from axionTools.rigging.controllerBox import adjustController as adjust
+from riggerTools.rigging.controllerBox import adjustController as adjust
 reload(adjust)
 
 adjust.creControllerFunc(	scale = 1, ctrlShape = 'circle_ctrlShape',color = 'yellow'	)
@@ -2842,7 +2842,7 @@ adjust.creControllerFunc(	scale = 1, ctrlShape = 'circle_ctrlShape',color = 'yel
 
 
 # read curve file and multiply -1
-from axionTools.rigging.readWriteCtrlSizeData import writeCtrlData as wcd
+from riggerTools.rigging.readWriteCtrlSizeData import writeCtrlData as wcd
 reload(wcd)
 sel = mc.ls(sl=True)
 shapes = wcd.getShape(sel[0])
@@ -2864,7 +2864,7 @@ newShapes.append(shapes)
 
 
 
-from axionTools.rigging.autoRig.base import rigTools
+from riggerTools.rigging.autoRig.base import rigTools
 reload( rigTools )
 
 
@@ -2892,7 +2892,7 @@ misc.parentSufficMatrix( child = '' , parent = '' , mo = True, w = 1, t = True, 
 misc.parentMatrix( src, tgt, mo = True, t = True, r = True, s = True)
 
 
-from axionTools.rigging.skin import skinUtil
+from riggerTools.rigging.skin import skinUtil
 reload(skinUtil)
 
 skinUtil.writeRigData()
@@ -2900,12 +2900,12 @@ skinUtil.writeRigData()
 
 
 
-from axionTools.rigging.util import misc as misc
+from riggerTools.rigging.util import misc as misc
 reload(misc)
 misc.constraintProxyJnt( child = 'bJnt', parent = 'pxyJnt' )
 
 
-from axionTools.rigging.util import misc as misc
+from riggerTools.rigging.util import misc as misc
 reload(misc)
 misc.parentSufficMatrix( child = 'bJnt' , parent = 'pxyJnt' , mo = True, w = 1, t = True, r = True, s = True)
 
@@ -2935,7 +2935,7 @@ for each in allJnt:
 
 
 # read json skinweight file
-from axionTools.rigging.readWriteCtrlSizeData import writeCtrlData as wcd
+from riggerTools.rigging.readWriteCtrlSizeData import writeCtrlData as wcd
 reload (wcd)
 
 def skinData(filePath=''):
@@ -2946,9 +2946,9 @@ def skinData(filePath=''):
 	return skinName
 	
 
-skinJntLst  = skinData(filePath=r"D:\True_Axion\Project_UGP\Content\3D_ART\DemonBlade\rigLowFix\data\skinData\jacket_ply_skcData.json")
+skinJntLst  = skinData(filePath=r"D:\studio_pipeline\Project_Sample\Content\3D_ART\DemonBlade\rigLowFix\data\skinData\jacket_ply_skcData.json")
 
-filePath=r"D:\True_Axion\Project_UGP\Content\3D_ART\DemonBlade\rigLowFix\data\skinData\jacket_ply_skcData.json"
+filePath=r"D:\studio_pipeline\Project_Sample\Content\3D_ART\DemonBlade\rigLowFix\data\skinData\jacket_ply_skcData.json"
 vertexDict 	= 	wcd.loadData(filePath)
 skinJntLst = vertexDict['skinJnt']
 skinName = vertexDict['skinCluster']
@@ -3034,10 +3034,10 @@ for influence in skinInfluences:
 
 
 # open containter folder
-from axionTools.pipeline import fileTools as fileTools 
+from riggerTools.pipeline import fileTools as fileTools 
 reload(fileTools)
 
-from nomanTools import aimCon as ac
+from riggerTools import aimCon as ac
 reload(ac)
 
 folder = fileTools.currentBackFolder()
@@ -3051,7 +3051,7 @@ ac.openContainerFile(path = folder)
 
 
 # my  OOP
-from axionTools.rigging import core
+from riggerTools.rigging import core
 reload(core)
 
 
@@ -3071,7 +3071,7 @@ stickLFT.setOverrideColor(16)
 
 
 
-from axionTools.rigging import core
+from riggerTools.rigging import core
 reload(core)
 
 
@@ -3084,7 +3084,7 @@ stickLFTa.setName('stickLFT_ctrl')
 stickLFTa.getRotation()
 
 
-from axionTools.rigging.readWriteCtrlSizeData import writeCtrlData as wcd
+from riggerTools.rigging.readWriteCtrlSizeData import writeCtrlData as wcd
 
 wcd.flipCtrlShape(axis=[2, 2, 2])
 
@@ -3102,13 +3102,13 @@ wcd.flipCtrlShape(axis=[2, 2, 2])
 
 
 ############################## LOCAL Publish
-from axionTools.rigging.util import misc as misc
+from riggerTools.rigging.util import misc as misc
 reload(misc)
 
-from nomanTools import aimCon  as ac
+from riggerTools import aimCon  as ac
 dir(ac)
 
-from axionTools.pipeline import fileTools as fileTools
+from riggerTools.pipeline import fileTools as fileTools
 reload (fileTools)
 
 
@@ -3183,10 +3183,10 @@ parS = mc.listConnections( '%s_parentConstraint1.target[0].targetParentMatrix' %
 
 
 
-from axionTools.rigging.util import misc as misc
+from riggerTools.rigging.util import misc as misc
 reload(misc)
 
-from axionTools.pipeline import fileTools as fileTools
+from riggerTools.pipeline import fileTools as fileTools
 reload (fileTools)
 fileTools.publishAsset(mode = 'local')
 
@@ -3201,9 +3201,9 @@ mc.addAttr( selected, longName = "localSwitch", at = 'enum', keyable=True , en =
 
 # hero
 # find asset path
-from axionTools.pipeline import fileTools as fileTools
+from riggerTools.pipeline import fileTools as fileTools
 reload(fileTools)
-from axionTools.rigging.util import misc as misc
+from riggerTools.rigging.util import misc as misc
 reload(misc)
 
 path = fileTools.whereAreMe()
@@ -3239,12 +3239,12 @@ mc.file( save = True, type = 'mayaAscii' )
 
 
 ############################## GLOBAL Publish
-from axionTools.rigging.util import misc as misc
+from riggerTools.rigging.util import misc as misc
 reload(misc)
-from nomanTools import aimCon  as ac
+from riggerTools import aimCon  as ac
 dir(ac)
 
-from axionTools.pipeline import fileTools as fileTools
+from riggerTools.pipeline import fileTools as fileTools
 reload (fileTools)
 
 
@@ -3298,7 +3298,7 @@ mc.file( save = True, type = 'mayaAscii' )
 
 ######################## find option for create version name
 
-from axionTools.pipeline import fileTools as fileTools
+from riggerTools.pipeline import fileTools as fileTools
 reload(fileTools)
 
 path = fileTools.whereAreMe()
@@ -3344,7 +3344,7 @@ versionn =match_object.group(0)
 reload(misc)
 misc.parentCon()
 
-from axionTools.pipeline import fileTools as fileTools
+from riggerTools.pipeline import fileTools as fileTools
 reload(fileTools)
 
 path = fileTools.whereAreMe()

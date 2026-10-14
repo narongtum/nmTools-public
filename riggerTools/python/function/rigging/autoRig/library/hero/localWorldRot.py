@@ -1,13 +1,13 @@
 '''
 
-from axionTools.rigging.autoRig.library import localWorldRot as lcw
+from riggerTools.rigging.autoRig.library import localWorldRot as lcw
 reload(lcw)
 
 '''
 
 import maya.cmds as mc
 
-from axionTools.rigging.util import misc as misc
+from riggerTools.rigging.util import misc as misc
 reload(misc)
 
 def localWorldOrient(nameList = ('','')):

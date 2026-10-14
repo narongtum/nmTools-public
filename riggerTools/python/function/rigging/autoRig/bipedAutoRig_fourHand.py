@@ -1,6 +1,6 @@
 import maya.cmds as mc
 
-# sys.path.append(r'D:\True_Axion\Tools\riggerTools\python\axionTools\rigging\autoRig\bodyRig')
+# sys.path.append(r'D:\studio_pipeline\Tools\riggerTools\python\riggerTools\rigging\autoRig\bodyRig')
 
 from function.rigging.autoRig.base import rigTools
 reload( rigTools )

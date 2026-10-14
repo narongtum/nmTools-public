@@ -1,6 +1,6 @@
 d:
-cd  D:\True_Axion\Tools\riggerTools\python\PythonLibs\Python37-32
+cd  D:\studio_pipeline\Tools\riggerTools\python\PythonLibs\Python37-32
 
-python D:\True_Axion\Tools\riggerTools\python\axionTools\pipeline\savingVersion.py
+python D:\studio_pipeline\Tools\riggerTools\python\riggerTools\pipeline\savingVersion.py
 
 time(10)

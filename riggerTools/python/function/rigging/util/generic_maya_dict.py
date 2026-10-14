@@ -1453,7 +1453,7 @@ def rename_joints(standard_dict, nanuq_dict):
 
 
 
-regulus_facial_dict = {'facialRegion': 'facial'    ,
+Project_A_facial_dict = {'facialRegion': 'facial'    ,
 							   'posiBlock' : (1,1)         	,
 
 							   'name_all':['eyeWondering_L',

@@ -2,7 +2,7 @@
 '''
 from function.rigging.autoRig.reference import templateJoint as tpJnt
 reload(tpJnt)
-tpJnt.importTemplete('D:/True_Axion/Tools/riggerTools/python/axionTools/rigging/autoRig/reference/EH_tmpRig.ma')
+tpJnt.importTemplete('D:/studio_pipeline/Tools/riggerTools/python/riggerTools/rigging/autoRig/reference/EH_tmpRig.ma')
 
 
 '''

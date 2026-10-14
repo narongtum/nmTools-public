@@ -8,7 +8,7 @@
 // DESCRIPTION:		
 //		
 // REQUIRES:	to install this menu just copy
-//	D:\\True_Axion\\Tools\\riggerTools\\maya
+//	D:\\studio_pipeline\\Tools\\riggerTools\\maya
 // 	to C:\\Users\\<user>\\Documents\\maya
 //
 // 

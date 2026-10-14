@@ -1,12 +1,12 @@
 '''
 DUPLICATE FINGER CURL MODULE WHY WHYYYY
-from axionTools.rigging import fingerOffsetRig 
+from riggerTools.rigging import fingerOffsetRig 
 reload(fingerOffsetRig)
 '''
 
 import maya.cmds as mc
 
-from axionTools.rigging.util import misc as misc
+from riggerTools.rigging.util import misc as misc
 reload(misc)
 
 
@@ -160,7 +160,7 @@ def connectToOffGrp(fingerName, fingerbehavior, side):
 # 5
 # try to use OOP
 # my  OOP so confuse
-from axionTools.rigging import core
+from riggerTools.rigging import core
 reload(core)
 
 # LFT Stick
@@ -173,7 +173,7 @@ stickRGT.setName(ctrlName)
 
 
 
-from axionTools.rigging.readWriteCtrlSizeData import flipController as fip
+from riggerTools.rigging.readWriteCtrlSizeData import flipController as fip
 reload(fip)
 
 # RGT Stick
@@ -361,7 +361,7 @@ doConnectRelax(figName = 'pinky' , finPst = 'Relax', numOfctrl = ('01','02','03'
 
 
 
-'''from axionTools.rigging.controllerBox import adjustController as adjust
+'''from riggerTools.rigging.controllerBox import adjustController as adjust
 reload(adjust)
 
 

@@ -1,12 +1,12 @@
 '''
-from axionTools.rigging.version import kneeLock_v001 
+from riggerTools.rigging.version import kneeLock_v001 
 '''
 import maya.cmds as mc
 
-from axionTools.rigging.util import misc as misc
+from riggerTools.rigging.util import misc as misc
 reload(misc)
 
-from axionTools.pipeline import fileTools as fileTools 
+from riggerTools.pipeline import fileTools as fileTools 
 reload(fileTools)
 
 

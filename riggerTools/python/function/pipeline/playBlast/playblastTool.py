@@ -50,7 +50,7 @@ reload(logger)
 artist = data.ARTIST_dict
 
 QT_PATH = r'C:\\Program Files (x86)\\QuickTime\\QuickTimePlayer.exe'
-# FFMPEG = r'D:\\True_Axion\\Tools\\riggerTools\\python\\axionTools\\pipeline\\playBlast\\framework\\ffmpeg-20181016-b2adc31-win64-static\\bin\\ffmpeg.exe'
+# FFMPEG = r'D:\\studio_pipeline\\Tools\\riggerTools\\python\\riggerTools\\pipeline\\playBlast\\framework\\ffmpeg-20181016-b2adc31-win64-static\\bin\\ffmpeg.exe'
 FFMPEG = r'D:\\sysTools\\nmTools\\riggerTools\\python\\function\\pipeline\\playBlast\\framework\\ffmpeg-20181016-b2adc31-win64-static\\bin\\ffmpeg.exe'
 INPUT_PATH = r'D:\\FFOutput\\playBlastTemp.avi'
 WATERMARK_PATH = r'D:\\sysTools\\nmTools\\riggerTools\\image\\cam_watermark.png'

@@ -6,12 +6,10 @@ This document is the centralized knowledge base and troubleshooting reference fo
 
 ## 📑 Table of Contents
 1. [Issue #001: Maya `ikSpringSolver` World Rotation Planar Twist Anomaly & Hotfix](#issue-001-maya-ikspringsolver-world-rotation-planar-twist-anomaly--hotfix)
-2. [Issue #002: Matrix Spline Aim Target Singularity & Tangent Vector Origin Error](#issue-002-matrix-spline-aim-target-singularity--tangent-vector-origin-error)
-3. [Issue #003: Joint Orientation & IK Popping Prevention (`rigTools.jointAt` + `freeze(r=True)`)](#issue-003-joint-orientation--ik-popping-prevention-rigtoolsjointat--freezertrue)
-4. [Issue #004: Global Scaling Double Translation Distortion in Matrix Offset Systems](#issue-004-global-scaling-double-translation-distortion-in-matrix-offset-systems)
-5. [Issue #005: Low-Resolution De Boor Spline Rigid Lever Arm Distortion](#issue-005-low-resolution-de-boor-spline-rigid-lever-arm-distortion)
-6. [Issue #006: Maya Component Selection Order Sorting Bug (`filterExpand` vs `orderedSelection`)](#issue-006-maya-component-selection-order-sorting-bug-filterexpand-vs-orderedselection)
-7. [Issue #007: Duplicate DAG Path String Evaluation in Maya Commands](#issue-007-duplicate-dag-path-string-evaluation-in-maya-commands)
+2. [Issue #002: Joint Orientation & IK Popping Prevention (`rigTools.jointAt` + `freeze(r=True)`)](#issue-002-joint-orientation--ik-popping-prevention-rigtoolsjointat--freezertrue)
+3. [Issue #003: Global Scaling Double Translation Distortion in Matrix Offset Systems](#issue-003-global-scaling-double-translation-distortion-in-matrix-offset-systems)
+4. [Issue #004: Maya Component Selection Order Sorting Bug (`filterExpand` vs `orderedSelection`)](#issue-004-maya-component-selection-order-sorting-bug-filterexpand-vs-orderedselection)
+5. [Issue #005: Duplicate DAG Path String Evaluation in Maya Commands](#issue-005-duplicate-dag-path-string-evaluation-in-maya-commands)
 
 ---
 
@@ -81,29 +79,7 @@ fix_quadruped_spring_ik_twist()
 
 ---
 
-## Issue #002: Matrix Spline Aim Target Singularity & Tangent Vector Origin Error
-
-### 1. Symptom & Context
-In matrix-based spline deformers and tentacles (`eh_matrixSpine_01_Merge.py`, `eh_matrixRibbonDeBoor_raw.py`), middle joints or child controllers flip $180^\circ$, jump erratically, or aim backward toward world origin $(0, 0, 0)$ when spline CVs are translated or rotated.
-
-### 2. Root Cause & Mathematical Breakdown
-* **Tangent Derivative Vector Origin Error**: `tangentMatrixNode` evaluates a relative derivative direction vector $\vec{T}(t)$ with its origin at $[0, 0, 0]$. In Maya, `aimMatrix` in Mode 1 (Aim at Position) computes the aim direction as:
-  $$\vec{D} = \text{TargetMatrixPosition} - \text{InputMatrixPosition}$$
-  Connecting `tangentMatrixNode` directly to `primaryTargetMatrix` causes `aimMatrix` to compute:
-  $$\vec{D} = [0, 0, 0] - P(t) = -P(t)$$
-  This causes the joint to aim backward toward the origin instead of forward along the curve tangent!
-* **Aim/Up Cross-Product Singularity on Horizontal Quadruped Spines**: On horizontal spines along the Z-axis, configuring `upVector = (0, 0, 1)` (+Z) creates a parallel/collinear condition with the curve aim tangent $(\vec{T} \parallel \vec{U})$, causing $\vec{T} \times \vec{U} = \vec{0}$ (undefined matrix basis) and severe $180^\circ$ flipping when spine controls pitch down.
-
-### 3. Standard Solution
-1. **Combine Point + Tangent ($P(t) + \vec{T}$)**: Always route Point and Tangent into a `wtAddMatrix` node:
-   $$\text{aimTargetNode} = \text{wtAddMatrix}(\text{PointMatrix}, \text{TangentMatrix})$$
-   So `aimMatrix` calculates $(P(t) + \vec{T}) - P(t) = \vec{T}$ (exact curve tangent).
-2. **Align with Vector Mode (`secondaryMode = 2`)**: Use Mode 2 ('Align with Vector') for secondary target evaluation instead of Mode 1.
-3. **Horizontal Spines Up-Vector (`useUpVector = False`)**: Keep `useUpVector = False` (or use world Up $(0, 1, 0)$) on horizontal spines.
-
----
-
-## Issue #003: Joint Orientation & IK Popping Prevention (`rigTools.jointAt` + `freeze(r=True)`)
+## Issue #002: Joint Orientation & IK Popping Prevention (`rigTools.jointAt` + `freeze(r=True)`)
 
 ### 1. Symptom & Context
 Procedural joint chains created from guide templates snap, twist, or pop out of position the instant an IK Handle (`ikRPsolver` / `ikSCsolver`) is created.
@@ -119,7 +95,7 @@ Procedural joint chains created from guide templates snap, twist, or pop out of 
 
 ---
 
-## Issue #004: Global Scaling Double Translation Distortion in Matrix Offset Systems
+## Issue #003: Global Scaling Double Translation Distortion in Matrix Offset Systems
 
 ### 1. Symptom & Context
 Scaling the master controller (`placement_ctrl` e.g. $\times 2$ or $\times 0.5$) causes bind joints or child controllers in matrix-driven spines to stretch out by scale factor squared ($S^2$) or collapse.
@@ -136,21 +112,7 @@ Scaling the master controller (`placement_ctrl` e.g. $\times 2$ or $\times 0.5$)
 
 ---
 
-## Issue #005: Low-Resolution De Boor Spline Rigid Lever Arm Distortion
-
-### 1. Symptom & Context
-On high-curvature snake appendages, tentacles, or long necks, translating or compressing master CV controllers causes downstream child controllers (e.g. `ChildCV09`–`ChildCV12`) to fan or burst outward radially.
-
-### 2. Root Cause & Mathematical Breakdown
-* In a 3-CV B-spline curve with 12 output child joints, the mathematical knot evaluation leaves a high initial static offset ($\approx 55$ units lever arm) in the bind pose.
-* When master CVs are compressed together, this fixed static matrix offset does not compress, acting as a rigid lever arm that swings child joints outward along their tangent normals.
-
-### 3. Mandatory Pipeline Standard
-* Always use a minimum of **4 to 5 Main CVs** on high-curvature multi-joint appendages to minimize initial static bind offsets to $< 2$ units.
-
----
-
-## Issue #006: Maya Component Selection Order Sorting Bug (`filterExpand` vs `orderedSelection`)
+## Issue #004: Maya Component Selection Order Sorting Bug (`filterExpand` vs `orderedSelection`)
 
 ### 1. Symptom & Context
 Interactive tools relying on sequential component selection (e.g. `create_joints_raycast_mesh.py` selecting Start Edge $\rightarrow$ End Edge) generate joint chains in reversed direction (bottom-to-top or sky-facing) regardless of user click order.
@@ -167,7 +129,7 @@ Interactive tools relying on sequential component selection (e.g. `create_joints
 
 ---
 
-## Issue #007: Duplicate DAG Path String Evaluation in Maya Commands
+## Issue #005: Duplicate DAG Path String Evaluation in Maya Commands
 
 ### 1. Symptom & Context
 Maya Python commands fail with errors like:

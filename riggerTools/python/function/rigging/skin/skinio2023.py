@@ -1,5 +1,5 @@
 # still broken
-# source: nomanTools\21.05.May.11.Tue_skin export API method
+# source: riggerTools\21.05.May.11.Tue_skin export API method
 # Skin Import / Export 
 # from Chad Vernon
 # Noman EDIT version
